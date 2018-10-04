@@ -3,11 +3,23 @@
 
 override_git_prompt_colors() {
   GIT_PROMPT_THEME_NAME="Solarized"
-  GIT_PROMPT_STAGED="${Yellow}●"
-  GIT_PROMPT_STASHED="${BoldMagenta}⚑ "
+  GIT_PROMPT_SYMBOLS_NO_REMOTE_TRACKING="✭"
+  GIT_PROMPT_STAGED="${Green}●"
+  GIT_PROMPT_UNTRACKED="${BoldYellow}…"
+  GIT_PROMPT_CONFLICTS=" ${BoldRed}✖"       # the number of files in conflict
+  GIT_PROMPT_STASHED="${BoldMagenta}★"
   GIT_PROMPT_CLEAN="${Green}✔"
-  GIT_PROMPT_END_USER=" \n${BoldBlue}${Time12a}${ResetColor} $ "
+  GIT_PROMPT_CHANGED="${BoldRed}+"        # the number of changed files
+  GIT_PROMPT_COMMAND_OK="\n${Green}✔ "
+  GIT_PROMPT_COMMAND_FAIL="\n${Red}✘-_LAST_COMMAND_STATE_"    # indicator if the last command returned with an exit code of other than 0
+  GIT_PROMPT_SYMBOLS_AHEAD="↑·"             # The symbol for "n versions ahead of origin"
+  GIT_PROMPT_SYMBOLS_BEHIND="↓·"            # The symbol for "n versions behind of origin"
+
+  
+  GIT_PROMPT_END_USER=" \n${BoldBlue}${Time12a}${ResetColor} ${Green}➤ ${ResetColor}"
   GIT_PROMPT_END_ROOT=" \n${BoldBlue}${Time12a}${ResetColor} # "
+  
+  GIT_PROMPT_LEADING_SPACE=1
 }
 
 reload_git_prompt_colors "Solarized"

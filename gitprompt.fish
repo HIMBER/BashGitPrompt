@@ -33,7 +33,7 @@ function fish_prompt
     set GIT_PROMPT_BRANCH "$Magenta"
     set GIT_PROMPT_STAGED "$Red● "
     set GIT_PROMPT_CONFLICTS "$Red✖ "
-    set GIT_PROMPT_CHANGED "$Blue✚ "
+    set GIT_PROMPT_CHANGED "$WHITE✚ "
     set GIT_PROMPT_REMOTE " "
     set GIT_PROMPT_UNTRACKED "…"
     set GIT_PROMPT_STASHED "⚑ "
